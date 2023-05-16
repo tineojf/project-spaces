@@ -134,16 +134,21 @@
         </p>
         <div class="input-group m-3 px-5">
           <input
-            type="text"
+            type="number"
+            min="1"
+            max="100"
             class="form-control"
             placeholder="¿Cuántas personas son en tu equipo?"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
+            id="numero"
+            required
           />
           <button
             class="btn btn-outline-light"
             type="button"
             id="button-addon2"
+            onclick="redirigir()"
           >
             OK
           </button>
@@ -162,5 +167,6 @@
         </p>
       </footer>
     </div>
+    <script src="/assets/index.js"></script>
   </body>
 </html>
