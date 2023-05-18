@@ -4,18 +4,14 @@ var valorParametro = new URLSearchParams(window.location.search).get(
 
 // Selecciona todos los elementos <span> con la clase 'resultado'
 var resultadoElements = document.querySelectorAll("span.resultado");
-var formaElements = document.querySelector("span.forma");
-var areaElement = document.querySelector("span.area");
 
 // Asigna el valor a cada elemento
 resultadoElements.forEach(function (element) {
   element.textContent = valorParametro;
 });
 
-areaElement.textContent = (parseFloat(valorParametro) * 8.7).toFixed(2);
+var areaElement = document.querySelector("span.area");
 
-if (valorParametro % 2 == 0) {
-  formaElements.textContent = "cuadrada.";
-} else {
-  formaElements.textContent = "lineal.";
-}
+areaElement.textContent = (
+  parseFloat(Math.floor(valorParametro / 8) + 1) * 34.32
+).toFixed(2);
